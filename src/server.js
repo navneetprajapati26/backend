@@ -17,7 +17,7 @@ mongoose.connect(mongodbPath).then(function () {
 
   //home rout (/)
   app.get("/", function (req, res) {
-    const response = { massage: "API work!" };
+    const response = { statuscode: res.statusCode, massage: "API work!" };
     res.json(response);
   });
 
